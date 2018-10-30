@@ -13,15 +13,15 @@ public class Read {
 		}
 		else {			
 		try{
-			File f = new File(args[0]);
-			Scanner s = new Scanner(f);
-			while(s.hasNextLine()){
-			String line = s.nextLine();
+			File file = new File(args[0]);
+			Scanner sc = new Scanner(file);
+			while(sc.hasNextLine()){
+			String line = sc.nextLine();
 			System.out.println(line);
 			}
 			 
 			}catch(FileNotFoundException e){
-			System.out.println("El archivo no existe...");
+			System.out.println("File not found...");
 			}
 		}
 	}
