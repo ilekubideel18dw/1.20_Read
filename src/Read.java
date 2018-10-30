@@ -12,16 +12,17 @@ public class Read {
 			System.out.println("You don't enter a parameter. Bye!");
 		}
 		else {			
-		try{
-			File file = new File(args[0]);
-			Scanner sc = new Scanner(file);
-			while(sc.hasNextLine()){
-			String line = sc.nextLine();
-			System.out.println(line);
+			try{
+				File file = new File(args[0]);
+				Scanner sc = new Scanner(file);
+				while(sc.hasNextLine()){
+					String line = sc.nextLine();
+					System.out.println(line);
+				}
+				 
 			}
-			 
-			}catch(FileNotFoundException e){
-			System.out.println("File not found...");
+			catch(FileNotFoundException e){
+				System.out.println("File not found...");
 			}
 		}
 	}
